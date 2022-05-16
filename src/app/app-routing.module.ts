@@ -38,7 +38,27 @@ const routes: Routes = [
   {
     path: 'uploadimage',
     loadChildren: () => import('./pages/uploadimage/uploadimage.module').then( m => m.UploadimagePageModule)
+  },  {
+    path: 'pages',
+    loadChildren: () => import('./searchp/src/app/pages/pages.module').then( m => m.PagesPageModule)
+  },
+  {
+    path: 'pages',
+    loadChildren: () => import('./searchproduct/src/app/pages/pages.module').then( m => m.PagesPageModule)
+  },
+  {
+    path: 'searchproduct',
+    loadChildren: () => import('./src/app/pages/searchproduct/searchproduct.module').then( m => m.SearchproductPageModule)
+  },
+  {
+    path: 'pages',
+    loadChildren: () => import('./src/app/pages/pages.module').then( m => m.PagesPageModule)
+  },
+  {
+    path: 'search-p',
+    loadChildren: () => import('./pages/search-p/search-p.module').then( m => m.SearchPPageModule)
   }
+
 
 ];
 
